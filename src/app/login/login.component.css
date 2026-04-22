@@ -1,0 +1,67 @@
+/* Reset + full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Center everything */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #507294;
+}
+
+/* Form container */
+.parent {
+    background-color: #e35151;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.parent label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.parent input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid #614747;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Input focus effect */
+.parent input:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+.parent button {
+    width: 100%;
+    padding: 10px;
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover */
+.parent button:hover {
+    background-color: #0056b3;
+}
