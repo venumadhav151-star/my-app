@@ -5,15 +5,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BindingPipe } from '@angular/compiler';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent, children:[
     {path:'home',component:HomeComponent},
-    {path:'welcome',component:WelcomeComponent}
+    {path:'welcome',component:WelcomeComponent},
+    {path:'databinding', component:DatabindingComponent}
   ]},
   {path:'',component:LoginComponent},
-  {path:'**', component:PageNotFoundComponent}
+  {path:'**', component:PageNotFoundComponent},
 ];
 
 
