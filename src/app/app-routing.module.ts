@@ -9,6 +9,7 @@ import { BindingPipe } from '@angular/compiler';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
     {path:'welcome',component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
     {path: 'directives', component: DirectivesComponent},
-    {path: 'pipes', component:PipesComponent}
+    {path: 'pipes', component:PipesComponent},
+    {path: 'users', component:UsersComponent}
 
    ]},
   {path:'',component:LoginComponent},

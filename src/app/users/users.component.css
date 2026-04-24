@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  padding: 20px;
+  color: #0f172a;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 20px 0 15px;
+  font-size: 26px;
+}
+
+/* Form container */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+  display: inline-block;
+  width: 110px;
+  font-size: 16px;
+}
+
+/* Inputs */
+input {
+  padding: 8px 10px;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+input:focus {
+  border-color: #3b82f6;
+}
+
+/* Search */
+.search-box {
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  width: 250px;
+  margin-right: 8px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px 4px;
+  transition: all 0.2s ease;
+}
+
+/* Button Colors */
+.blue-button {
+  background: #3b82f6;
+  color: white;
+}
+.blue-button:hover {
+  background: #2563eb;
+}
+
+.green-button {
+  background: #10b981;
+  color: white;
+}
+.green-button:hover {
+  background: #059669;
+}
+
+.red-button {
+  background: #ef4444;
+  color: white;
+}
+.red-button:hover {
+  background: #dc2626;
+}
+
+.yellow-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.gray-button {
+  background: #64748b;
+  color: white;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background: #3b82f6;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #e0f2fe;
+}
+
+/* Salary Highlight */
+.low-salary {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.high-salary {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Action button inside table */
+td .red-button {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
