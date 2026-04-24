@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BindingPipe } from '@angular/compiler';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -15,8 +16,10 @@ const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
-    {path: 'directives', component: DirectivesComponent}
-  ]},
+    {path: 'directives', component: DirectivesComponent},
+    {path: 'pipes', component:PipesComponent}
+
+   ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
 ];
