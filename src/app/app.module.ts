@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     HomeComponent,
     WelcomeComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

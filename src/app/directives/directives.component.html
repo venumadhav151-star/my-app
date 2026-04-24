@@ -1,0 +1,42 @@
+<p>directives works!</p>
+
+
+<!-- for ondition -->
+
+<p *ngFor="let state of states">{{state}}</p>
+
+<ul>
+    <li *ngFor="let state of states"> {{state}}</li>
+</ul>
+
+
+<!-- STURCTURAL DIRECTIGVES: *ngFor, *ngIf -->
+ <!-- ATTRIBUTE DIRECTIVES: [ngstyle], [ngclass] -->
+<!-- states dropdown -->
+
+<select name="" id="">
+    <option value="" *ngFor="let state of states">{{state}}</option>
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let users of user">
+            <td >{{users.name}}</td>
+            <td 
+            [ngStyle]="{'color': users.age<35?'green':'red'}"
+            [ngClass]="{'young':user.age<35, 'old' :user.age>35}"
+            >{{users.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- if condition -->
+
+
+<h1 *ngIf = "show"> show is true </h1>
