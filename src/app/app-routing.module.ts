@@ -10,6 +10,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
+import { ItemsComponent } from './items/items.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path:'databinding', component:DatabindingComponent},
     {path: 'directives', component: DirectivesComponent},
     {path: 'pipes', component:PipesComponent},
-    {path: 'users', component:UsersComponent}
+    {path: 'users', component:UsersComponent},
+    {path: 'items', component:ItemsComponent}
 
    ]},
   {path:'',component:LoginComponent},

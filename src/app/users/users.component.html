@@ -1,95 +1,64 @@
 <h1>All Users</h1>
 
-<!-- SEARCH -->
-<div class="search-box">
-  <input type="text" placeholder="Search" [(ngModel)]="term" name="search">
-  <button (click)="search()" class="blue-button">Search</button>
-  <button (click)="reset()" class="gray-button">Reset</button>
-</div>
+<input type="text" placeholder="search" [(ngModel)]="term">
+<button (click)="search()">search</button>
+<br><br>
 
-<!-- CREATE USER -->
+
 <h2>Create User</h2>
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label for="">Age:</label>
+<input type="number" [(ngModel)]="age">
+<br>
+<label for="">Salary:</label>
+<input type="number" [(ngModel)]="salary">
+<br>
+<label for="">Department:</label>
+<input type="text" [(ngModel)]="department">
+<br>
+<label for="">Rating:</label>
+<input type="number" [(ngModel)]="rating">
+<br>
+<button (click)="create()" class="green-button">create</button>
+<br><br>
 
-<div class="form-group">
-  <label>Name:</label>
-  <input type="text" [(ngModel)]="name" name="name">
-</div>
+<button (click)="addBonus()" class="blue-button">2000 bounus</button>
+<button (click)="activeUsers()" class="blue-button">Active Users</button>
+<button (click)="salaryLH()" class="blue-button">Salary Low to High</button>
+<button class="blue-button">Salary High to Low</button>
+<button (click)="totalSalaries()" class="blue-button">Total Salaries</button>
 
-<div class="form-group">
-  <label>Age:</label>
-  <input type="number" [(ngModel)]="age" name="age">
-</div>
-
-<div class="form-group">
-  <label>Salary:</label>
-  <input type="number" [(ngModel)]="salary" name="salary">
-</div>
-
-<div class="form-group">
-  <label>Department:</label>
-  <input type="text" [(ngModel)]="department" name="department">
-</div>
-
-<div class="form-group">
-  <label>Rating:</label>
-  <input type="number" [(ngModel)]="rating" name="rating">
-</div>
-
-<button (click)="create()" class="green-button">Create</button>
-
-<!-- ACTION BUTTONS -->
-<div>
-  <button (click)="addBonus()" class="blue-button">+2000 Bonus</button>
-  <button (click)="activeUsers()" class="blue-button">Active Users</button>
-  <button (click)="salaryLH()" class="blue-button">Salary Low → High</button>
-  <button (click)="salaryHL()" class="blue-button">Salary High → Low</button>
-  <button (click)="totalSalaries()" class="blue-button">Total Salaries</button>
-</div>
-
-<!-- TABLE -->
-<div class="table-container">
-  <table>
+<br><br>
+<table>
     <thead>
-      <tr>
-        <th>S No</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Salary</th>
-        <th>Department</th>
-        <th>Active</th>
-        <th>Rating</th>
-        <th>Actions</th>
-      </tr>
+        <tr>
+            <th>S No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Active</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
     </thead>
-
     <tbody>
-      <tr *ngFor="let user of users; let i = index">
-        <td>{{ i + 1 }}</td>
-
-        <td [ngStyle]="{ color: user.isActive ? 'green' : 'red' }">
-          {{ user.name }}
-          <span *ngIf="user.isActive">(A)</span>
-        </td>
-
-        <td>{{ user.age }}</td>
-
-        <td [ngClass]="{
-              'low-salary': user.salary < 100000,
-              'high-salary': user.salary >= 100000
-            }">
-          {{ user.salary }}
-        </td>
-
-        <td>{{ user.department | uppercase }}</td>
-
-        <td>{{ user.isActive ? 'Yes' : 'No' }}</td>
-
-        <td>{{ user.rating }}</td>
-
-        <td>
-          <button (click)="delete(i)" class="red-button">Delete</button>
-        </td>
-      </tr>
+        <tr *ngFor="let user of users; let i=index">
+            <td>{{i+1}}</td>
+            <td [ngStyle]="{ 'color': user.isActive==true?'green':'red'}">
+                {{user.name}}
+                <span *ngIf="user.isActive==true"> (A)</span>
+            </td>
+            <td>{{user.age}}</td>
+            <td [ngClass]="{ 'low-salary':user.salary<100000,'high-salary':user.salary>=100000}">{{user.salary}}</td>
+            <td>{{user.department | uppercase}}</td>
+            <td>{{user.isActive ? 'Yes' : 'No' }}</td>
+            <td>{{user.rating}}</td>
+            <td>
+                <button (click)="delete(i)" class="red-button">delete</button>
+            </td>
+        </tr>
     </tbody>
-  </table>
-</div>
+</table>

@@ -29,7 +29,6 @@ export class UsersComponent {
   rating: number = 0;
   term: string = "";
 
-  // CREATE USER
   create() {
     const user = {
       id: Date.now(),
@@ -41,57 +40,37 @@ export class UsersComponent {
       rating: this.rating
     };
 
-    this.allUsers.unshift(user);
-    this.reset();
+    this.users.unshift(user);
   }
 
-  // DELETE USER
   delete(i: number) {
-    const id = this.users[i].id;
-    this.allUsers = this.allUsers.filter(u => u.id !== id);
-    this.reset();
+    this.users.splice(i, 1);
   }
 
-  // ADD BONUS
   addBonus() {
-    this.allUsers = this.allUsers.map(u => ({
-      ...u,
-      salary: u.salary + 2000
-    }));
-    this.reset();
+    this.users = this.users.map(user => {
+      user.salary = user.salary + 2000;
+      return user;
+    });
   }
 
-  // FILTER ACTIVE USERS
   activeUsers() {
-    this.users = this.allUsers.filter(u => u.isActive);
+    this.users = this.users.filter(user => user.isActive === true);
   }
 
-  // SORT LOW → HIGH
   salaryLH() {
-    this.users = [...this.users].sort((a, b) => a.salary - b.salary);
+    this.users.sort((a, b) => a.salary - b.salary);
   }
 
-  // SORT HIGH → LOW
-  salaryHL() {
-    this.users = [...this.users].sort((a, b) => b.salary - a.salary);
-  }
-
-  // TOTAL SALARIES
   totalSalaries() {
-    const total = this.users.reduce((sum, u) => sum + u.salary, 0);
+    const total = this.users.reduce((agg, user) => agg + user.salary, 0);
     alert("Total salaries: " + total);
   }
 
-  // SEARCH
   search() {
-    this.users = this.allUsers.filter(u =>
-      u.name.toLowerCase().includes(this.term.toLowerCase())
+    this.users = this.users.filter(user =>
+      user.name.toLowerCase().includes(this.term.toLowerCase())
     );
   }
 
-  // RESET
-  reset() {
-    this.users = [...this.allUsers];
-    this.term = "";
-  }
 }

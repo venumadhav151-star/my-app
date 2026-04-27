@@ -1,0 +1,71 @@
+<p>items works!</p>
+
+<h1>The pen story</h1>
+
+<!-- 🔍 Search -->
+<input type="text" placeholder="search" [(ngModel)]="searchtype">
+<button (click)="search()">search</button>
+
+<button (click)="onlyFreeDelivery()">only free delivery</button>
+
+<br><br>
+
+<!-- 🔃 Sorting -->
+<button (click)="priceHighToLow()">price high to low</button>
+<button (click)="ratingLowToHigh()">rating low to high</button>
+<button (click)="ratingHighToLow()">rating high to low</button>
+
+<br><br>
+
+<!-- ➕ Add Item -->
+<label>Name</label>
+<input [(ngModel)]="name">
+
+<label>Price</label>
+<input type="number" [(ngModel)]="price">
+
+<label>Rating</label>
+<input type="number" [(ngModel)]="rating">
+
+<label>Free Delivery</label>
+<input type="radio" name="delivery" (change)="delivery=true"> Yes
+<input type="radio" name="delivery" (change)="delivery=false"> No
+
+<br><br>
+
+<button (click)="addItem()">Add to cart</button>
+
+<br><br>
+
+<!-- 💰 Totals -->
+<button (click)="totalPrice()">total price</button>
+<button (click)="totalItems()">total cart items</button>
+
+<br><br><br>
+
+<!-- 📊 Table -->
+<table border="1">
+  <thead>
+    <tr>
+      <th>s.no</th>
+      <th>name</th>
+      <th>price</th>
+      <th>rating</th>
+      <th>delivery</th>
+      <th>action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of items; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.rating }}</td>
+      <td>{{ item.delivery ? 'yes' : 'no' }}</td>
+      <td>
+        <button class="delete" (click)="delete(i)">delete</button>
+    </td>
+    </tr>
+  </tbody>
+</table>
