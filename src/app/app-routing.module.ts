@@ -11,6 +11,10 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ItemsComponent } from './items/items.component';
+import { CarsComponent } from './cars/cars.component';
+import { VechileService } from './vechile.service';
+import { VehicleComponent } from './vehicle/vehicle.component';
+
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -21,7 +25,9 @@ const routes: Routes = [
     {path: 'directives', component: DirectivesComponent},
     {path: 'pipes', component:PipesComponent},
     {path: 'users', component:UsersComponent},
-    {path: 'items', component:ItemsComponent}
+    {path: 'items', component:ItemsComponent},
+    {path: 'cars', component:CarsComponent},
+    {path: 'vehicle', component:VehicleComponent}
 
    ]},
   {path:'',component:LoginComponent},

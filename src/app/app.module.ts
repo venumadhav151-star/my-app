@@ -15,6 +15,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ItemsComponent } from './items/items.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { CarsComponent } from './cars/cars.component';
+import { VechileService } from './vechile.service';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -29,12 +32,14 @@ import { VehicleComponent } from './vehicle/vehicle.component';
     PipesComponent,
     UsersComponent,
     ItemsComponent,
-    VehicleComponent
+    VehicleComponent,
+    CarsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

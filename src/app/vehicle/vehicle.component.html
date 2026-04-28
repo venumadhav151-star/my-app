@@ -1,1 +1,35 @@
 <p>vehicle works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>colour</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>tyres</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vechile of vechile">
+            <td>{{vechile.vehicle}}</td>
+            <td>{{vechile.manufacturer}}</td>
+            <td>{{vechile.model}}</td>
+            <td>{{vechile.type}}</td>
+            <td>{{vechile.fuel}}</td>
+            <td>{{vechile.colour}}</td>
+            <td>
+                <img [src]="vechile.image" alt="" width="100px" height="100px">
+            </td>
+            <td>{{vechile.cost}}</td>
+            <td>{{vechile.tyres}}</td>
+            <td>{{vechile.id}}</td>
+
+        </tr>
+    </tbody>
+</table>

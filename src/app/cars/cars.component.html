@@ -1,0 +1,63 @@
+<p>cars works!</p>
+
+
+<h1>the cars </h1>
+
+<label for="">want to your car to the list </label>
+<input type="text" name="" id="" placeholder="enter the car you want to add to the list  ">
+
+<br>
+
+<label for="">name </label>
+<input type="text" name="" id="">
+<br>
+
+<label for="">price</label>
+<input type="number" name="" id="">
+<br>
+<label for="">year</label>
+<input type="number" name="" id="">
+<br>
+<label for="">sold units</label>
+<input type="text" name="" id="">
+<br>
+<label for="">rating</label>
+<input type="number" name="" id="">
+
+<br><br>
+<button (click)="submit()">submit</button>
+
+<button>after discount</button>
+<br>
+<button></button>
+<br>
+<button>book your car</button>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>s.no</th>
+            <th>name</th>
+            <th>price</th>
+            <th>year</th>
+            <th>sold</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{car.name }}</td>
+            <td>{{car.price}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.sold ? 'yes' : 'no'}}</td>
+            <td>{{car.rating}}</td>
+            <td>
+                <!-- <button (click)="delete(i)">delete</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
