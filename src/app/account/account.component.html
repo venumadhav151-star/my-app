@@ -1,0 +1,25 @@
+<p>account works!</p>
+
+<thead>
+    <tr>
+        <th>account_name</th>
+        <th>available_balance</th>
+        <th>account_number</th>
+        <th>city</th>
+        <th>profie_picture</th>
+        <th>ifsc_code</th>
+        <th>id</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let account of account">
+        <td>{{account.account_name}}</td>
+        <td>{{account.available_balance}}</td>
+        <td>{{account.account_number}}</td>
+        <td>{{account.city}}</td>
+        <td>{{account.profie_picture}}</td>
+        <td>{{account.ifsc_code}}</td>
+        <td>{{account.id}}</td>
+
+    </tr>
+</tbody>

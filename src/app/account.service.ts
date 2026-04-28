@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class VechileService {
+export class AccountService {
 
   constructor( private httpClient:HttpClient) {}
 
-  getvechiles():Observable<any>{
-    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction");
+  getaccounts():Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals");
   }
 }

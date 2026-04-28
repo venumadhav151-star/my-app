@@ -14,6 +14,8 @@ import { ItemsComponent } from './items/items.component';
 import { CarsComponent } from './cars/cars.component';
 import { VechileService } from './vechile.service';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountComponent } from './account/account.component';
+import { AccountService } from './account.service';
 
 
 const routes: Routes = [
@@ -27,7 +29,8 @@ const routes: Routes = [
     {path: 'users', component:UsersComponent},
     {path: 'items', component:ItemsComponent},
     {path: 'cars', component:CarsComponent},
-    {path: 'vehicle', component:VehicleComponent}
+    {path: 'vehicle', component:VehicleComponent},
+    {path: 'account', component:AccountComponent}
 
    ]},
   {path:'',component:LoginComponent},

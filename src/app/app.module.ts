@@ -17,7 +17,8 @@ import { ItemsComponent } from './items/items.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { CarsComponent } from './cars/cars.component';
 import { VechileService } from './vechile.service';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {HttpClientModule} from '@angular/common/http'
     ItemsComponent,
     VehicleComponent,
     CarsComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
