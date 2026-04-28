@@ -1,0 +1,29 @@
+/* container */
+.mail-container {
+  padding: 20px;
+}
+
+/* each mail row */
+.mail-item {
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  gap: 15px;
+}
+
+/* index number */
+.index {
+  font-weight: bold;
+  width: 30px;
+}
+
+/* unread mails */
+.unread {
+  font-weight: bold;
+  color: black;
+}
+
+/* read mails */
+.mail-item:not(.unread) {
+  color: gray;
+}

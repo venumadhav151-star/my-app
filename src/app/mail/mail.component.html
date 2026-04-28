@@ -1,0 +1,15 @@
+<div class="mail-container">
+
+  <div *ngFor="let mail of mail; let i = index"
+       class="mail-item"
+       [ngClass]="{ 'unread': !mail.opened }">
+
+    <span class="index">{{ i + 1 }}</span>
+
+    <span class="title">
+      {{ mail.title }}
+    </span>
+
+  </div>
+
+</div>

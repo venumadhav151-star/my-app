@@ -18,6 +18,9 @@ import { AccountComponent } from './account/account.component';
 import { AccountService } from './account.service';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { FlipkartService } from './flipkart.service';
+import { MailComponent } from './mail/mail.component';
+import { MailService } from './mail.service';
+
 
 
 const routes: Routes = [
@@ -33,7 +36,8 @@ const routes: Routes = [
     {path: 'cars', component:CarsComponent},
     {path: 'vehicle', component:VehicleComponent},
     {path: 'account', component:AccountComponent},
-    {path: 'flipkart', component:FlipkartComponent}
+    {path: 'flipkart', component:FlipkartComponent},
+    {path: 'mail', component:MailComponent}
 
    ]},
   {path:'',component:LoginComponent},

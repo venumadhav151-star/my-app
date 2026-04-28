@@ -20,6 +20,7 @@ import { VechileService } from './vechile.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     CarsComponent,
     AccountComponent,
     FlipkartComponent,
+    MailComponent,
   ],
   imports: [
     BrowserModule,
