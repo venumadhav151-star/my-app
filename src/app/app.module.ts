@@ -19,6 +19,8 @@ import { CarsComponent } from './cars/cars.component';
 import { VechileService } from './vechile.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { AccountComponent } from './account/account.component';
     VehicleComponent,
     CarsComponent,
     AccountComponent,
+    FlipkartComponent,
   ],
   imports: [
     BrowserModule,

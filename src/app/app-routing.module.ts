@@ -16,6 +16,8 @@ import { VechileService } from './vechile.service';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccountComponent } from './account/account.component';
 import { AccountService } from './account.service';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { FlipkartService } from './flipkart.service';
 
 
 const routes: Routes = [
@@ -30,7 +32,8 @@ const routes: Routes = [
     {path: 'items', component:ItemsComponent},
     {path: 'cars', component:CarsComponent},
     {path: 'vehicle', component:VehicleComponent},
-    {path: 'account', component:AccountComponent}
+    {path: 'account', component:AccountComponent},
+    {path: 'flipkart', component:FlipkartComponent}
 
    ]},
   {path:'',component:LoginComponent},
