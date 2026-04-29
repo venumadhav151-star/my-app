@@ -8,18 +8,29 @@ import { VechileService } from '../vechile.service';
 })
 export class VehicleComponent {
 
-  vechile:any = [];
+  vechile: any = [];
 
-  constructor(private vechileservice:VechileService){
-  vechileservice.getvechiles().subscribe(
-    (data:any)=>{
-      this.vechile =data;
-    },
-    (err:any)=>{
-      alert("internal server eroor");
-    }
-  )
+  constructor(private vechileservice: VechileService) {
+    vechileservice.getvechiles().subscribe(
+      (data: any) => {
+        this.vechile = data;
+      },
+      (err: any) => {
+        alert("internal server eroor");
+      }
+    )
+  }
 
+  deleteVehicle(id: string) {
+    this.vechileservice.deleteVehicle(id).subscribe(
+      (data: any) => {
+        alert("deleted sucess");
+        location.reload();
+      },
+      (err: any) => {
+        alert("delete failed");
+      }
+    )
   }
 
 }

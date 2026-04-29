@@ -21,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { MailComponent } from './mail/mail.component';
     AccountComponent,
     FlipkartComponent,
     MailComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,

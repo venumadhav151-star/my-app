@@ -13,6 +13,7 @@
             <th>cost</th>
             <th>tyres</th>
             <th>id</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +30,9 @@
             <td>{{vechile.cost}}</td>
             <td>{{vechile.tyres}}</td>
             <td>{{vechile.id}}</td>
+            <td>
+                <button class="red-button" (click)="deleteVehicle(vechile.id)">delete</button>
+            </td>
 
         </tr>
     </tbody>
