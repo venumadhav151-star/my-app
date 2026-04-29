@@ -1,5 +1,8 @@
 <p>account works!</p>
 
+<input type="text" placeholder="search" [(ngModel)]="term">
+<button class="red-button" (click)="filterAccount()">search</button>
+
 <thead>
     <tr>
         <th>account_name</th>
@@ -9,17 +12,25 @@
         <th>profie_picture</th>
         <th>ifsc_code</th>
         <th>id</th>
+        <th>button</th>
     </tr>
 </thead>
 <tbody>
-    <tr *ngFor="let account of account">
+    <tr *ngFor="let account of accounts">
         <td>{{account.account_name}}</td>
         <td>{{account.available_balance}}</td>
         <td>{{account.account_number}}</td>
         <td>{{account.city}}</td>
-        <td>{{account.profie_picture}}</td>
+        <td>
+            <img [src]="account.profie_picture" width="100px" height= "100px">
+        </td>
         <td>{{account.ifsc_code}}</td>
         <td>{{account.id}}</td>
+        <td>
+            <button class="gray-button" (click)="deleteAccount(account.id)">delete</button>
+        </td>
 
     </tr>
 </tbody>
+
+<button class="gray-button" (click)="pageaccounts(i+1)" *ngFor="let page of [].constructor(10);let i=index">{{i+1}}</button>
