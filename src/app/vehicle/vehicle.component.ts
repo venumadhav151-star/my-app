@@ -32,5 +32,17 @@ export class VehicleComponent {
       }
     )
   }
+  term:string="";
+  filterVechiles(){
+    this.vechileservice.getfilterdvehicle(this.term).subscribe(
+      (data:any)=>{
+        this.vechile = data;
+      },
+      (err:any) =>{
+        alert("server issue");
+      }
+        
+    )
+  }
 
 }
