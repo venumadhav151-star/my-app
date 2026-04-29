@@ -5,6 +5,19 @@
 
 <br>
 
+<label for="">column</label>
+<select [(ngModel)]="column">
+    <option value="color">color</option>
+    <option value="fuel">fuel</option>
+    <option value="model">model</option>
+</select>
+
+<label for="">order:</label>
+<select [(ngModel)]="order">
+    <option value="asc">Ascending </option>
+    <option value="desc">Descending</option>
+</select>
+<button class="blue-button" (click)="sortvechiles()">sort</button>
 
 <table>
     <thead>
@@ -29,7 +42,7 @@
             <td>{{vechile.model}}</td>
             <td>{{vechile.type}}</td>
             <td>{{vechile.fuel}}</td>
-            <td>{{vechile.colour}}</td>
+            <td>{{vechile.color}}</td>
             <td>
                 <img [src]="vechile.image" alt="" width="100px" height="100px">
             </td>

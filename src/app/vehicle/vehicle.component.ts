@@ -21,6 +21,23 @@ export class VehicleComponent {
     )
   }
 
+  column:string="";
+  order:string="";
+
+  sortvechiles(){
+    this.vechileservice
+    .getSortVechiles(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.vechile=data;
+      },
+      (err:any)=>{
+        alert("some ");
+      }
+        
+
+    )
+  }
+
   deleteVehicle(id: string) {
     this.vechileservice.deleteVehicle(id).subscribe(
       (data: any) => {
