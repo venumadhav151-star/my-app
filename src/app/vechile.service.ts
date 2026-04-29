@@ -10,7 +10,7 @@ export class VechileService {
   constructor( private httpClient:HttpClient) {}
 
   getvechiles():Observable<any>{
-    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction");
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page=1");
   }
 
   getSortVechiles(coloumn:string, order:string):Observable<any>{
@@ -23,6 +23,10 @@ export class VechileService {
 
   getfilterdvehicle(term:string):Observable<any>{
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter"+term);
+  }
+
+  getpagedvechiles(page:number):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page="+page);
   }
   
 }

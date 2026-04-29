@@ -62,4 +62,15 @@ export class VehicleComponent {
     )
   }
 
+  pageVechicles(page: number) {
+    this.vechileservice.getpagedvechiles(page).subscribe(
+      (data: any) => {
+        this.vechile=data;
+      },
+      (err: any) => {
+        alert("delete failed");
+      }
+    )
+  }
+
 }
