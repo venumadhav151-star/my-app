@@ -73,4 +73,15 @@ export class VehicleComponent {
     )
   }
 
+  getvechileswithparams(page:number=1){
+    this.vechileservice.getvechileswithparams(this.term, this.column,this.order,page).subscribe(
+      (data: any) => {
+        this.vechile=data;
+      },
+      (err: any) => {
+        alert("delete failed");
+      }
+    )
+  }
+
 }

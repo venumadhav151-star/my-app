@@ -2,6 +2,8 @@
 
 <input type="text" name="" id="" placeholder="search" [(ngModel)]="term">
 <button class="blue-button" (click)="filterVechiles()">   filter</button>
+<button class="blue-button" (click)="getvechileswithparams()">search2</button>
+<button class="blue-button" (click)="getvechileswithparams()">sort2</button>
 
 <br>
 
@@ -62,3 +64,8 @@
 (click)="pageVechicles(i+1)"
 *ngFor="let page of [].constructor(10);let i=index">
 {{i+1}}</button>
+
+<hr>
+<button class="green-button" (click)="getvechileswithparams(i+1)" *ngFor="let page of [].constructor(10);let i=index">
+
+</button>
