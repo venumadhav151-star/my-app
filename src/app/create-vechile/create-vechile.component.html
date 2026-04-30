@@ -1,0 +1,35 @@
+<p>create-vechile works!</p>
+
+<h1>Create Vechile Form</h1>
+
+<form [formGroup]="vechileForm" (ngSubmit)="submit()">
+
+    <label for="">Vechile</label>
+    <input type="text" formControlName="Vechile">
+    <br>
+
+    <label for="">manufacturer</label>
+    <input type="text" formControlName="manufacturer">
+    <br>
+
+    <label for="">model</label>
+    <input type="text" formControlName="model">
+    <br>
+
+    <label for="">Type</label>
+    <input type="text" formControlName="type">
+    <br>
+
+    <label for="">Fuel</label>
+    <input type="text" formControlName="fuel">
+    <br>
+
+    <label for="">color</label>
+    <input type="text" formControlName="color">
+    <br>
+
+    <label for="">image</label>
+    <input type="text" formControlName="image">
+
+    <input type="submit">
+</form>

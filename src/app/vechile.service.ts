@@ -18,7 +18,7 @@ export class VechileService {
   }
 
   deleteVehicle(id:string):Observable<any>{
-    return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction" +id);
+    return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/" +id);
   }
 
   getfilterdvehicle(term:string):Observable<any>{
@@ -30,6 +30,10 @@ export class VechileService {
   }
   getvechileswithparams(term:string, coloumn:string,order:string, page:number):Observable<any>{
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term+"&sortBy="+coloumn+"&order="+order+"&limit=10&page="+page);
+  }
+
+  createVehicle(vehicle:any):Observable<any>{
+    return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle)
   }
 
 }

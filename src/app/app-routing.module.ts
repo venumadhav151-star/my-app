@@ -21,6 +21,7 @@ import { FlipkartService } from './flipkart.service';
 import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail.service';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVechileComponent } from './create-vechile/create-vechile.component';
 
 
 
@@ -39,8 +40,8 @@ const routes: Routes = [
     {path: 'account', component:AccountComponent},
     {path: 'flipkart', component:FlipkartComponent},
     {path: 'mail', component:MailComponent},
-    {path: 'weather', component:WeatherComponent}
-
+    {path: 'weather', component:WeatherComponent},
+    {path: 'create-vechile', component:CreateVechileComponent}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
