@@ -23,6 +23,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVechileComponent } from './create-vechile/create-vechile.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { CreateVechileComponent } from './create-vechile/create-vechile.componen
     MailComponent,
     WeatherComponent,
     CreateVechileComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,

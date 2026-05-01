@@ -2,7 +2,7 @@
 
 <input type="text" placeholder="search" [(ngModel)]="term">
 <button class="red-button" (click)="filterAccount()">search</button>
-
+<br>
 <thead>
     <tr>
         <th>account_name</th>
@@ -15,6 +15,7 @@
         <th>button</th>
     </tr>
 </thead>
+
 <tbody>
     <tr *ngFor="let account of accounts">
         <td>{{account.account_name}}</td>
