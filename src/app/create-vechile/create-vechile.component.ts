@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { VechileService } from '../vechile.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-vechile',
@@ -19,19 +20,50 @@ export class CreateVechileComponent {
     image: new FormControl(),
   })
 
-  constructor(private vechileService:VechileService){}
+  id:string="";
+  constructor(private vechileService:VechileService, private activatedRoute:ActivatedRoute){
+    activatedRoute.params.subscribe(
+      (data:any)=>{
+        this.id=data.id;
+        vechileService.getVechile(data.id).subscribe(
+          (data:any)=>{
+            this.vechileForm.patchValue(data);
+          }
+        )
+      }
+        
+    )
+  }
 
-  
+ 
   submit(){
-    console.log(this.vechileForm);
-    this.vechileService.createVehicle(this.vechileForm.value).subscribe(
+    if(this.id){
+      //edit
+      this.vechileService.editVehicle(this.id,this.vechileForm.value).subscribe(
+        (data:any)=>{
+          alert("edited sucess");
+          this.vechileForm.reset();
+        },
+        (err:any)=>{
+          alert("edit failed");
+        }
+      )
+    }
+    else{
+      //create
+      this.vechileService.createVehicle(this.vechileForm.value).subscribe(
       (data:any)=>{
         alert("created sucessfully");
         this.vechileForm.reset();
       },
-      (err:any)=>
+      (err:any)=>{
         alert("creation failes")
+      }
     )
+
+    }
+    console.log(this.vechileForm);
+    
   }
 
 }

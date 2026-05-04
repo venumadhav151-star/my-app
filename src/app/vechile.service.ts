@@ -37,7 +37,11 @@ export class VechileService {
   }
 
   createVehicle(vehicle:any):Observable<any>{
-    return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle)
+    return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle);
   }
 
+  editVehicle(id:string,vehicle:any):Observable<any>{
+    return this.httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,vehicle);
+
+}
 }

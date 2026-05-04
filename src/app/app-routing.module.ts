@@ -50,6 +50,7 @@ const routes: Routes = [
     {path: 'idcard', component:IdcardComponent},
     {path: 'createidcard', component:CreateidcardService},
     {path: 'vehicle-details/:id', component:VehicleDetailsComponent},
+    {path: 'edit-vehicle/:id', component:CreateVechileComponent}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
