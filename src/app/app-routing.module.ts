@@ -23,6 +23,9 @@ import { MailService } from './mail.service';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVechileComponent } from './create-vechile/create-vechile.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { CreateidcardService } from './createidcard.service';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 
@@ -43,7 +46,10 @@ const routes: Routes = [
     {path: 'mail', component:MailComponent},
     {path: 'weather', component:WeatherComponent},
     {path: 'create-vechile', component:CreateVechileComponent},
-    {path: 'create-account', component:CreateAccountComponent}
+    {path: 'create-account', component:CreateAccountComponent},
+    {path: 'idcard', component:IdcardComponent},
+    {path: 'createidcard', component:CreateidcardService},
+    {path: 'vehicle-details/:id', component:VehicleDetailsComponent},
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},

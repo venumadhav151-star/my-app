@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -24,6 +23,9 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVechileComponent } from './create-vechile/create-vechile.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { CreateidcardService } from './createidcard.service';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     WeatherComponent,
     CreateVechileComponent,
     CreateAccountComponent,
+    IdcardComponent,
+    VehicleDetailsComponent,
   ],
   imports: [
     BrowserModule,
