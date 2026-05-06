@@ -23,9 +23,8 @@ import { MailService } from './mail.service';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVechileComponent } from './create-vechile/create-vechile.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { IdcardComponent } from './idcard/idcard.component';
-import { CreateidcardService } from './createidcard.service';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentComponent } from './student/student.component';
 
 
 
@@ -47,10 +46,9 @@ const routes: Routes = [
     {path: 'weather', component:WeatherComponent},
     {path: 'create-vechile', component:CreateVechileComponent},
     {path: 'create-account', component:CreateAccountComponent},
-    {path: 'idcard', component:IdcardComponent},
-    {path: 'createidcard', component:CreateidcardService},
     {path: 'vehicle-details/:id', component:VehicleDetailsComponent},
-    {path: 'edit-vehicle/:id', component:CreateVechileComponent}
+    {path: 'edit-vehicle/:id', component:CreateVechileComponent},
+    {path: 'student', component:StudentComponent}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},

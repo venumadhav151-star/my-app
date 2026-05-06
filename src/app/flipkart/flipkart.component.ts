@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FlipkartService } from '../flipkart.service';
 
-@Component({
+Component({
   selector: 'app-flipkart',
   templateUrl: './flipkart.component.html',
   styleUrls: ['./flipkart.component.css']

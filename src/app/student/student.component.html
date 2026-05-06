@@ -1,0 +1,24 @@
+<p>student works!</p>
+
+<div class="container">
+    <div *ngFor="let students of student" class="card">
+
+        <div>
+            <img src="{{students.school_logo}}" alt="">
+        </div>
+        
+    <div> <h2>{{students.school_name}}</h2> </div>
+
+        <h3>{{students.name}}</h3>
+        <p>{{students.phone}}</p>
+        <p>{{students.city}}</p>
+        <p>{{students.dob}}</p>
+        <p>{{students.email}}</p>
+        <p>{{students.school_city}}</p>
+        <p>{{students.school_pin}}</p>
+        <p>{{students.id}}</p>
+
+        <img src="{{students.profile_picture}}" alt="">
+
+    </div>
+</div>

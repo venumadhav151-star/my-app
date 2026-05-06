@@ -23,9 +23,9 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVechileComponent } from './create-vechile/create-vechile.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { IdcardComponent } from './idcard/idcard.component';
-import { CreateidcardService } from './createidcard.service';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentComponent } from './student/student.component';
+import { StudentService } from './student.service';
 
 
 @NgModule({
@@ -44,13 +44,13 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     VehicleComponent,
     CarsComponent,
     AccountComponent,
-    FlipkartComponent,
+    // FlipkartComponent,
     MailComponent,
     WeatherComponent,
     CreateVechileComponent,
     CreateAccountComponent,
-    IdcardComponent,
     VehicleDetailsComponent,
+    StudentComponent,
   ],
   imports: [
     BrowserModule,
