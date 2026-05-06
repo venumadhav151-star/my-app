@@ -23,6 +23,8 @@ export class LoginComponent {
       (data:any)=>{
         alert("login sucess");
         this.router.navigateByUrl("/dashboard");
+        // store token
+        localStorage.setItem("token",data.access_token);
       },
       (err:any)=>{
         alert("invalid credentials");

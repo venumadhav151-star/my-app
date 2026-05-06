@@ -25,12 +25,13 @@ import { CreateVechileComponent } from './create-vechile/create-vechile.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentComponent } from './student/student.component';
+import { AuthGuard } from './auth.guard';
 
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent, children:[
+  {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent, children:[
     {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
