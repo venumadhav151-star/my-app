@@ -26,6 +26,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentComponent } from './student/student.component';
 import { StudentService } from './student.service';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { StudentService } from './student.service';
     CreateAccountComponent,
     VehicleDetailsComponent,
     StudentComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

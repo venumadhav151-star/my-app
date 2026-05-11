@@ -27,12 +27,13 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { StudentComponent } from './student/student.component';
 import { AuthGuard } from './auth.guard';
 import { NotifyGuard } from './notify.guard';
+import { ParentComponent } from './parent/parent.component';
 
 
 
 const routes: Routes = [
-  {path:'login',component:LoginComponent},
-  {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent, children:[
+    {path:'login',component:LoginComponent},
+    {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent, children:[
     {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'databinding', component:DatabindingComponent},
@@ -50,7 +51,8 @@ const routes: Routes = [
     {path: 'create-account', component:CreateAccountComponent},
     {path: 'vehicle-details/:id', component:VehicleDetailsComponent},
     {path: 'edit-vehicle/:id', component:CreateVechileComponent},
-    {path: 'student', component:StudentComponent}
+    {path: 'student', component:StudentComponent},
+    {path: 'parent', component:ParentComponent}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
