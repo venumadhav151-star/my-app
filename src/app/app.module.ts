@@ -28,6 +28,7 @@ import { StudentComponent } from './student/student.component';
 import { StudentService } from './student.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { ChildComponent } from './child/child.component';
     StudentComponent,
     ParentComponent,
     ChildComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
