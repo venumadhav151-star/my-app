@@ -29,6 +29,7 @@ import { StudentService } from './student.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { CreateUsersComponent } from './create-users/create-users.component';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { RatingComponent } from './rating/rating.component';
     VehicleComponent,
     CarsComponent,
     AccountComponent,
-    // FlipkartComponent,
+    //FlipkartComponent,
     MailComponent,
     WeatherComponent,
     CreateVechileComponent,
@@ -57,6 +58,7 @@ import { RatingComponent } from './rating/rating.component';
     ParentComponent,
     ChildComponent,
     RatingComponent,
+    CreateUsersComponent,
   ],
   imports: [
     BrowserModule,
