@@ -1,0 +1,32 @@
+<p>create-users works!</p>
+
+
+<form [formGroup]="userform" (ngSubmit)="submit()">
+
+    <label for="">name</label>
+    <input type="text" name="" id="" formControlName ="name">
+
+    <label for="">age</label>
+    <input type="number" formControlName ="age">
+    
+    <label for="">phone</label>
+    <input type="number" formControlName ="phone">
+
+    <label for="">email</label>
+    <input type="email" formControlName ="email">
+
+    <div formGroupName="address">
+
+        <label for="">city</label>
+        <input type="text" formControlName ="city">
+
+        <label for="">pin</label>
+        <input type="number" formControlName ="pin">
+
+    </div>
+
+    <input type="submit" name="" id="">
+    
+
+    
+</form>
