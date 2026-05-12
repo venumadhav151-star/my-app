@@ -30,6 +30,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { CreateUsersComponent } from './create-users/create-users.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -59,6 +62,9 @@ import { CreateUsersComponent } from './create-users/create-users.component';
     ChildComponent,
     RatingComponent,
     CreateUsersComponent,
+    ItemComponent,
+    NavComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
