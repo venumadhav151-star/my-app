@@ -33,6 +33,7 @@ import { CreateUsersComponent } from './create-users/create-users.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactUsModule } from './contact-us/contact-us.module';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

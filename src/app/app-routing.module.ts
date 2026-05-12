@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -32,6 +32,7 @@ import { CreateUsersComponent } from './create-users/create-users.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
 
 
 
@@ -60,7 +61,9 @@ const routes: Routes = [
     {path: 'create-users', component:CreateUsersComponent},
     {path: 'item', component:ItemComponent},
     {path: 'nav', component:NavComponent},
-    {path: 'cart', component:CartComponent}
+    {path: 'cart', component:CartComponent},
+    {path: 'contact-sales', component:ContactSalesComponent},
+    {path: 'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
@@ -68,7 +71,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
