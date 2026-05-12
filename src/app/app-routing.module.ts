@@ -32,6 +32,7 @@ import { CreateUsersComponent } from './create-users/create-users.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
 
 
 
@@ -60,7 +61,8 @@ const routes: Routes = [
     {path: 'create-users', component:CreateUsersComponent},
     {path: 'item', component:ItemComponent},
     {path: 'nav', component:NavComponent},
-    {path: 'cart', component:CartComponent}
+    {path: 'cart', component:CartComponent},
+    {path: 'contact-sales', component:ContactSalesComponent}
    ]},
   {path:'',component:LoginComponent},
   {path:'**', component:PageNotFoundComponent},
