@@ -16,7 +16,7 @@ import { ItemsComponent } from './items/items.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { CarsComponent } from './cars/cars.component';
 import { VechileService } from './vechile.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './account/account.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
@@ -34,6 +34,9 @@ import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactUsModule } from './contact-us/contact-us.module';
+import { PricePipe } from './price.pipe';
+import { CapitalDirective } from './capital.directive';
+import { TokenInterceptor } from './token.interceptor';
 
 
 @NgModule({
@@ -66,6 +69,8 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     ItemComponent,
     NavComponent,
     CartComponent,
+    PricePipe,
+    CapitalDirective,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,13 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     ReactiveFormsModule,
     ContactUsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
