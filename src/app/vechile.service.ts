@@ -9,6 +9,9 @@ export class VechileService {
 
   constructor( private httpClient:HttpClient) {}
 
+  baseUrl:string ="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
+  //baseUrl:string ="/assets/vehicles.json";
+
   getvechiles():Observable<any>{
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page=1");
   }
